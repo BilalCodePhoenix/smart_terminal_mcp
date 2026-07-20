@@ -1,0 +1,21 @@
+[project]
+name = "smart_terminal_mcp"
+version = "0.1.0"
+description = "An MCP server that adds local terminal automation capabilities to AI agents."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastmcp>=3.4.4",
+    "mcp>=1.28.1",
+]
+
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+smart_terminal_mcp = "smart_terminal_mcp.main:main"
